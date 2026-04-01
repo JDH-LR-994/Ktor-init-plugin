@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>com.likhodievskii.ktor-init</id>
+
+    <name>Ktor Init</name>
+
+    <vendor email="jdh994lr@gmail.com">Andrey Likhodievskii</vendor>
+
+    <description><![CDATA[
+                    <p>
+            Интеграция с <a href='https://start.ktor.io'>start.ktor.io</a> для Вашей IDE для создания Ktor приложений<br>
+                Возможности:
+              <ul>
+                <li>Выбор зависимостей для Вашего проекта</li>
+                <li>Конфигурация метаданных</li>
+                <li>Создание и импорт проектов в IDE</li>
+              </ul>
+              <a href="https://github.com/JDH-LR-994/Ktor-init-plugin">Ссылка на исходный код</a>
+            </p>
+    ]]></description>
+
+
+    <depends>com.intellij.modules.platform</depends>
+    <extensions defaultExtensionNs="com.intellij">
+        <newProjectWizard.generator
+                implementation="com.likhodievskii.ktorinit.KtorProjectGenerator"
+                id="Ktor.generator"
+        />
+    </extensions>
+</idea-plugin>
